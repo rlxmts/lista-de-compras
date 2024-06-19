@@ -1,3 +1,4 @@
+import { IoTrashBinSharp } from "react-icons/io5";
 import styled from "styled-components";
 
 const CardBox = styled.div`
@@ -6,6 +7,16 @@ const CardBox = styled.div`
     background-color: ${(props)=> props.corSecundaria};
     padding: 1rem;
     position: relative;
+
+    .deletar{
+        position: absolute;
+        top:10px;
+        right:10px;
+
+        &:hover{
+            color: red;
+        }
+    }
 
     h5,span{
     color: ${(props)=> props.corPrimaria};
@@ -26,6 +37,7 @@ const Card = ({corPrimaria, corSecundaria, nome, categoria})=> {
             corPrimaria={corPrimaria}
             corSecundaria={corSecundaria}
         >
+            <IoTrashBinSharp className="deletar" onClick={deletar}/>
             <h5 corPrimaria={corPrimaria}>
                 {nome}
             </h5>

@@ -43,7 +43,6 @@ function App() {
 
   const recebeValor = (produto)=>{
     setProdutos([...produtos, produto]); 
-    console.log(produtos) 
   }
 
   return (
