@@ -2,66 +2,48 @@ import { useState } from "react";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
+import ListaDeCompras from "./components/ListaDeCompras";
 
 function App() {
 
   const cores = [
     {
-      cor: 'Mercearia em geral',
-      fundo: '#e6e4f1',
-      fonte: '#54456d'
+      categoria: 'Mercearia em geral',      
     },
     {
-      cor: 'Padaria',
-      fundo: '#ead875',
-      fonte: '#cfba5f'
+      categoria: 'Padaria',      
     },
     {
-      cor: 'Bebidas',
-      fundo: '#d1e8f3',
-      fonte: '#1f465b'
+      categoria: 'Bebidas',
     },
     {
-        cor: 'Guloseimas',
-        fundo: '#eeb386',
-        fonte: '#3c140e'
+        categoria: 'Guloseimas',        
     },
     {
-        cor: 'Naturais',
-        fundo: '#bfd09e',
-        fonte: '#364027'
+        categoria: 'Naturais',        
     },
     {
-        cor: 'Laticínios',
-        fundo: '#ead9aa',
-        fonte: '#643623'
+        categoria: 'Laticínios',        
     },
     {
-        cor: 'Carnes',
-        fundo: '#eaa9ac',
-        fonte: '#6e2e31'
+        categoria: 'Carnes',
     },
     {
-      cor: 'Limpeza',
-      fundo: '#d2f3d6',
-      fonte: '#1c4b24'
+      categoria: 'Limpeza',
     },
     {
-      cor: 'Higiene',
-      fundo: '#add99c',
-      fonte: '#14250e'
+      categoria: 'Higiene',
     },
     {
-      cor: 'Pet',
-      fundo: '#fee5f8',
-      fonte: '#550232'
+      categoria: 'Pet',
     } 
 ]
 
   const [produtos, setProdutos] = useState([]);
 
   const recebeValor = (produto)=>{
-    setProdutos([...produtos, produto]);
+    setProdutos([...produtos, produto]); 
+    console.log(produtos) 
   }
 
   return (
@@ -69,6 +51,9 @@ function App() {
         <Header />
         <Banner />
         <Formulario cores={cores} valoresCapturados={valor => recebeValor(valor)}/>
+        <ListaDeCompras 
+          produto={produtos} 
+        />
     </div>
   );
 }

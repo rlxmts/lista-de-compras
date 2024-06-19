@@ -5,6 +5,7 @@ const Cabecalho = styled.header`
     align-items: center;
     gap: 1rem;
     justify-content: space-between;
+    margin: 1rem 0;
 `
 
 const ContainerImg = styled.div`

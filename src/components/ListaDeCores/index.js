@@ -14,7 +14,7 @@ const Select = styled.select`
 const ListaDeCores = ({obrigatorio, cores, aoEscolher})=> {    
     return(
         <Select required={obrigatorio} onChange={(e) => aoEscolher(e.target.value)}>
-            {cores.map( cor => <option key={cor.cor}>{cor.cor}</option>)}
+            {cores.map( cor => <option key={cor.categoria}>{cor.categoria}</option> )}
         </Select>
     )
 }

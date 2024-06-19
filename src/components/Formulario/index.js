@@ -14,14 +14,43 @@ const Form = styled.form`
 const Formulario = ({cores, valoresCapturados})=> {   
     
     const [produto, setProduto] = useState('');
-    const [cor, setCor] = useState('Mercearia em geral');
+    const [categoria, setCategoria] = useState('Mercearia em geral');
+
+    const obterCores = (categoria)=> {
+        switch(categoria){
+            case 'Mercearia em geral':
+                return{corSecundaria: '#e6e4f1', corPrimaria: '#54456d'};
+            case 'Padaria':
+                return{corSecundaria: '#ead875', corPrimaria: '#3d200b'};
+            case 'Bebidas':
+                return{corSecundaria: '#d1e8f3', corPrimaria: '#1f465b'};
+            case 'Guloseimas':
+                return{corSecundaria: '#eeb386', corPrimaria: '#3c140e'};
+            case 'Naturais':
+                return{corSecundaria: '#bfd09e', corPrimaria: '#364027'};
+            case 'Laticínios':
+                return{corSecundaria: '#ead9aa', corPrimaria: '#643623'};
+            case 'Carnes':
+                return{corSecundaria: '#eaa9ac', corPrimaria: '#6e2e31'};
+            case 'Limpeza':
+                return{corSecundaria: '#d2f3d6', corPrimaria: '#1c4b24'};
+            case 'Higiene':
+                return{corSecundaria: '#add99c', corPrimaria: '#14250e'};
+            case 'Pet':
+                return{corSecundaria: '#fee5f8', corPrimaria: '#550232'};
+            default:
+                return { corSecundaria: '#d2f3d6', corPrimaria: '#1c4b24' };
+        }
+    }
 
     const capturarCampos = (e)=> {
         e.preventDefault();
+        const cores = obterCores(categoria)
         valoresCapturados(
             {
                 produto,
-                cor
+                categoria,
+                cores
             }
         )
     }
@@ -36,7 +65,7 @@ const Formulario = ({cores, valoresCapturados})=> {
             <ListaDeCores 
                 obrigatorio={true} 
                 cores={cores} 
-                aoEscolher={valor => setCor(valor)}
+                aoEscolher={valor => setCategoria(valor)}
             />
             <Botao>Cadastrar Produto</Botao>
         </Form>
