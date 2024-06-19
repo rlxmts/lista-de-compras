@@ -3,7 +3,7 @@ import Formulario from "./components/Formulario";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import ListaDeCompras from "./components/ListaDeCompras";
-
+import Wpp from "./components/Wpp";
 function App() {
 
   const cores = [
@@ -51,9 +51,8 @@ function App() {
         <Header />
         <Banner />
         <Formulario cores={cores} valoresCapturados={valor => recebeValor(valor)}/>
-        <ListaDeCompras 
-          produto={produtos} 
-        />
+        <ListaDeCompras produto={produtos} />
+        <Wpp />
     </div>
   );
 }
