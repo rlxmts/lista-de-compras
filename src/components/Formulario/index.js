@@ -53,6 +53,8 @@ const Formulario = ({cores, valoresCapturados})=> {
                 cores
             }
         )
+
+        setProduto('');
     }
 
     return(
@@ -60,6 +62,7 @@ const Formulario = ({cores, valoresCapturados})=> {
             <CampoTexto 
                 placeholder="Digite seu produto aqui..." 
                 required
+                value={produto}
                 onChange={(e) => setProduto(e.target.value)}
             />            
             <ListaDeCores 
