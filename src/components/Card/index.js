@@ -4,7 +4,7 @@ const CardBox = styled.div`
     border-radius: 5px;
     border-left: 5px solid ${(props)=> props.corPrimaria};
     background-color: ${(props)=> props.corSecundaria};
-    padding: 1.5rem;
+    padding: 1rem;
     position: relative;
 
     h5,span{
