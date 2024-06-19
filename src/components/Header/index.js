@@ -9,7 +9,7 @@ const Cabecalho = styled.header`
 
 const ContainerImg = styled.div`
     background-color: #6eaa4c;
-    width: 25px;
+    width: 30px;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
@@ -35,7 +35,7 @@ const Header = ()=> {
                 <Titulo>Crie sua lista de Compras</Titulo>
             <ContainerImg>
                 <a 
-                    href="https://wa.me/5521991537608"
+                    href="https://github.com/rlxmts/lista-de-compras"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
