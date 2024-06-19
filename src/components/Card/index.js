@@ -37,7 +37,7 @@ const Card = ({corPrimaria, corSecundaria, nome, categoria})=> {
             corPrimaria={corPrimaria}
             corSecundaria={corSecundaria}
         >
-            <IoTrashBinSharp className="deletar" onClick={deletar}/>
+            <IoTrashBinSharp className="deletar"/>
             <h5 corPrimaria={corPrimaria}>
                 {nome}
             </h5>
