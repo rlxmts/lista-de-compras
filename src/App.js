@@ -7,25 +7,45 @@ function App() {
 
   const cores = [
     {
-        cor: 'salmão',
+      cor: 'Mercearia em geral',
+      fundo: '#e6e4f1',
+      fonte: '#54456d'
+    },
+    {
+      cor: 'Padaria',
+      fundo: '#ead875',
+      fonte: '#cfba5f'
+    },
+    {
+      cor: 'Bebidas',
+      fundo: '#d1e8f3',
+      fonte: '#1f465b'
+    },
+    {
+        cor: 'Guloseimas',
         fundo: '#eeb386',
         fonte: '#3c140e'
     },
     {
-        cor: 'verde',
+        cor: 'Naturais',
         fundo: '#bfd09e',
         fonte: '#364027'
     },
     {
-        cor: 'bege',
+        cor: 'Laticínios',
         fundo: '#ead9aa',
         fonte: '#643623'
     },
     {
-        cor: 'vermelho',
+        cor: 'Carnes',
         fundo: '#eaa9ac',
         fonte: '#6e2e31'
-    }
+    },
+    {
+      cor: 'Limpeza',
+      fundo: '#d2f3d6',
+      fonte: '#1c4b24'
+  },
 ]
 
   const [produtos, setProdutos] = useState([]);

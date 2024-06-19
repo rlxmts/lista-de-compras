@@ -6,12 +6,15 @@ const Select = styled.select`
     border: 1px solid #f2f2f2;
     outline:none;
     border-radius: 20px;
+    option{
+        font-family: "Poppins", sans-serif;
+    }
 `
 
 const ListaDeCores = ({obrigatorio, cores, aoEscolher})=> {    
     return(
         <Select required={obrigatorio} onChange={(e) => aoEscolher(e.target.value)}>
-            {cores.map( cor => <option key={cor.cor}>Cor do card: {cor.cor}</option>)}
+            {cores.map( cor => <option key={cor.cor}>{cor.cor}</option>)}
         </Select>
     )
 }

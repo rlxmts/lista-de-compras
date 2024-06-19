@@ -14,7 +14,7 @@ const Form = styled.form`
 const Formulario = ({cores, valoresCapturados})=> {   
     
     const [produto, setProduto] = useState('');
-    const [cor, setCor] = useState('salmão');
+    const [cor, setCor] = useState('Mercearia em geral');
 
     const capturarCampos = (e)=> {
         e.preventDefault();

@@ -9,4 +9,10 @@ export const Botao = styled.button`
     font-size: 1rem;
     width:100%;
     text-align: center;
+    transition: .5s;
+    cursor:pointer;
+
+    &:hover{
+        background-color:#1c4b24;
+    }
     `
