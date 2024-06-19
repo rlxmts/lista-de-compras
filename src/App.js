@@ -45,7 +45,17 @@ function App() {
       cor: 'Limpeza',
       fundo: '#d2f3d6',
       fonte: '#1c4b24'
-  },
+    },
+    {
+      cor: 'Higiene',
+      fundo: '#add99c',
+      fonte: '#14250e'
+    },
+    {
+      cor: 'Pet',
+      fundo: '#fee5f8',
+      fonte: '#550232'
+    } 
 ]
 
   const [produtos, setProdutos] = useState([]);
